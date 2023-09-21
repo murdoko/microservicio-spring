@@ -25,10 +25,15 @@ test {
 }
 
 jacocoTestReport {
- 	dependsOn test
 	reports {
-		xml.enabled(true)
-	}
+        	xml.enabled true // a flag anteriormente era false
+        	csv.enabled false
+        	html.destination file("${buildDir}/jacocoHtml")
+    	}
+
+    	afterEvaluate {
+        	excludeFiles(classDirectories, coverageExclusions)
+    	}
 	
 }
 
