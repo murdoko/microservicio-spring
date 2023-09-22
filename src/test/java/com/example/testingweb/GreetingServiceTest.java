@@ -8,7 +8,7 @@ public class GreetingServiceTest {
 	@Test
 	public void test1() {
 		GreetingService greetingService = new GreetingService();
-		assertThat("Hello, World", "Hello, World");
+		assertThat("Hello, World").contains("Hello, World");
 	
 	}
 }
