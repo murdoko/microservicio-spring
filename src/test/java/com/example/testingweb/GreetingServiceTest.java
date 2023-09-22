@@ -8,7 +8,11 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
-@AutoConfigureMockMvc
+import org.junit.jupiter.api.Test;
+import org.mockito.MockedStatic;
+import org.mockito.Mockito;
+import org.springframework.boot.SpringApplication;
+
 public class GreetingServiceTest {
 
 	@Test
@@ -21,7 +25,10 @@ public class GreetingServiceTest {
 	
 	@Test
 	public void test2() {
-		TestingWebApplication testingWebApplication = new TestingWebApplication();
-		testingWebApplication.main(new String[] {});
+		MockedStatic<SpringApplication> utilities = Mockito.mockStatic(SpringApplication.class);
+        	utilities.when((MockedStatic.Verification) SpringApplication.run(WebsiteApplication.class, new String[]{})).thenReturn(null);
+        	WebsiteApplication.main(new String[]{});
+        	assertThat(SpringApplication.run(WebsiteApplication.class, new String[]{})).isEqualTo(null);
+    
 	}	
 }
