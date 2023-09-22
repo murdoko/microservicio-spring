@@ -13,6 +13,8 @@ import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.springframework.boot.SpringApplication;
 
+@ExtendWith(MockitoExtension.class) 
+@RunWith(MockitoJUnitRunner.class)
 public class GreetingServiceTest {
 
 	@Test
