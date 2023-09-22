@@ -23,8 +23,8 @@ public class GreetingServiceTest {
 	
 	}
 
-	@Mock
-  	private SpringApplicationBuilder springApplicationBuilder;
+	//@Mock
+  	//private SpringApplicationBuilder springApplicationBuilder;
 	
 	@Test
 	public void test2() {
