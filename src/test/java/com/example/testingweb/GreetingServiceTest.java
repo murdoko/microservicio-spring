@@ -11,4 +11,10 @@ public class GreetingServiceTest {
 		assertThat(greetingService.greet()).contains("Hello, World");
 	
 	}
+	@Test
+	public void test2() {
+		TestingWebApplication testingWebApplication = new TestingWebApplication();
+		assertThat(testingWebApplication.main()).isNotNull();
+	
+	}	
 }
