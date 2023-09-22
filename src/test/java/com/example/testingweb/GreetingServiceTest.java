@@ -14,7 +14,10 @@ public class GreetingServiceTest {
 	private GreetingService service;
 
 	@Test
-	public void contextLoads() throws Exception {
-		assertThat(service).isNotNull();
+	public void test1() {
+		GreetingService greetingService = new GreetingService();
+		final greet resultado = greetingService().greet();
+		Assertions.assertEquals("Hello, World", resultado);
+		
 	}
 }
