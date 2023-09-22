@@ -33,14 +33,13 @@ public class GreetingServiceTest {
 	
 		//TestingWebApplication app = new TestingWebApplication();		
 		//app.main(new String[]{});
-		GreetingService greetingService = new GreetingService();
-		assertThat(greetingService.greet()).contains("Hello, World");
+
 			
-		//TestingWebApplication app = new TestingWebApplication();
-		//Mockito.when(springApplicationBuilder.sources(TestingWebApplication.class)).thenReturn(springApplicationBuilder);
-		//SpringApplicationBuilder result = TestingWebApplication.configure(springApplicationBuilder);
-		//Mockito.verify(springApplicationBuilder).sources(TestingWebApplication.class);
-		//assertEquals(springApplicationBuilder, result);
+		TestingWebApplication app = new TestingWebApplication();
+		Mockito.when(springApplicationBuilder.sources(TestingWebApplication.class)).thenReturn(springApplicationBuilder);
+		SpringApplicationBuilder result = TestingWebApplication.configure(springApplicationBuilder);
+		Mockito.verify(springApplicationBuilder).sources(TestingWebApplication.class);
+		assertEquals(springApplicationBuilder, result);
 	    
 	}
     
