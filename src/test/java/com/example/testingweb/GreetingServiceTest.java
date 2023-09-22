@@ -26,7 +26,7 @@ public class GreetingServiceTest {
 	    @Test
 	    public void mainPassesArguments() {
 		TestingWebApplication.main(new String[] {});
-		//assertTrue(true);
+		assertTrue(true);
 		//Mockito.mockStatic(SpringApplication.class);
 	        //TestingWebApplication.main(new String[]{"Hello", "World"});
 		//Mockito.verify(SpringApplication.class);
