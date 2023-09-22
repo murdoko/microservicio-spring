@@ -8,6 +8,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
+@AutoConfigureMockMvc
 public class GreetingServiceTest {
 
 	@Test
@@ -22,7 +23,7 @@ public class GreetingServiceTest {
 	
 	@Test
 	public void test2() {
-		TestingWebApplication myList = mockMvc(TestingWebApplication.class);
+		TestingWebApplication myList = this.mockMvc(TestingWebApplication.class);
 		String[] strAr1=new String[] {"Ani", "Sam", "Joe"}; //inline initialization  
 		assertThat(myList.main(strAr1)).isNotNull();
 	
