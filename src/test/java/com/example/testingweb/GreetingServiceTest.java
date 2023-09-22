@@ -11,9 +11,13 @@ public class GreetingServiceTest {
 		assertThat(greetingService.greet()).contains("Hello, World");
 	
 	}
+
+	@Autowired
+	private MockMvc mockMvc;
+	
 	@Test
 	public void test2() {
-		TestingWebApplication myList = mock(TestingWebApplication.class);
+		TestingWebApplication myList = mockMvc(TestingWebApplication.class);
 		String[] strAr1=new String[] {"Ani", "Sam", "Joe"}; //inline initialization  
 		assertThat(myList.main(strAr1)).isNotNull();
 	
