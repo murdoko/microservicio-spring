@@ -20,7 +20,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 
 
-@SpringBootTest
 public class GreetingServiceTest {
 
 	@Test
