@@ -23,7 +23,6 @@ public class GreetingServiceTest {
 	
 	    @Test
 	    public void mainPassesArguments() {
-	        mockStatic(SpringApplication.class);
 	        TestingWebApplication.main(new String[]{"Hello", "World"});
 	    }
     
