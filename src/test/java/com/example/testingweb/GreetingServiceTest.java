@@ -14,7 +14,7 @@ public class GreetingServiceTest {
 	@Test
 	public void test2() {
 		TestingWebApplication testingWebApplication = new TestingWebApplication();
-		String[] arrayParam = [1,2];
+		String[] arrayParam = {1,2};
 		assertThat(testingWebApplication.main(arrayParam)).isNotNull();
 	
 	}	
