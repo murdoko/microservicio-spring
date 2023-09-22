@@ -26,9 +26,9 @@ public class GreetingServiceTest {
 	@Test
 	public void test2() {
 		MockedStatic<SpringApplication> utilities = Mockito.mockStatic(SpringApplication.class);
-        	utilities.when((MockedStatic.Verification) SpringApplication.run(WebsiteApplication.class, new String[]{})).thenReturn(null);
-        	WebsiteApplication.main(new String[]{});
-        	assertThat(SpringApplication.run(WebsiteApplication.class, new String[]{})).isEqualTo(null);
+        	utilities.when((MockedStatic.Verification) SpringApplication.run(TestingWebApplication.class, new String[]{})).thenReturn(null);
+        	TestingWebApplication.main(new String[]{});
+        	assertThat(SpringApplication.run(TestingWebApplication.class, new String[]{})).isEqualTo(null);
     
 	}	
 }
