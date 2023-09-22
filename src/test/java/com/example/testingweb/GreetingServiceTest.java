@@ -3,6 +3,7 @@ package com.example.testingweb;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Assertions;
+import org.junit.runner.RunWith
 
 
 import org.springframework.test.web.servlet.MockMvc;
@@ -13,7 +14,6 @@ import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.springframework.boot.SpringApplication;
 
-@ExtendWith(MockitoExtension.class) 
 @RunWith(MockitoJUnitRunner.class)
 public class GreetingServiceTest {
 
