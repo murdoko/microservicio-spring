@@ -8,10 +8,7 @@ public class TestingWebApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TestingWebApplication.class, args);
-		System.out.println(printMessage1("Ok"));
+		return "ok"
 	}
 
-	static String printMessage1(String value) {
-            return value;
-    }
 }
