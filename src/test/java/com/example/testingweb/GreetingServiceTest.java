@@ -19,7 +19,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
+@SpringBootTest(classes = TestingWebApplication.class)
 public class GreetingServiceTest {
 
 	@Test
@@ -41,8 +41,8 @@ public class GreetingServiceTest {
 		//Mockito.verify(SpringApplication.class);
 		//SpringApplication.run(TestingWebApplication.class, new String[]{"Hello", "World"});
 	
-		TestingWebApplication app = new TestingWebApplication();		
-		app.main(new String[]{});
+		//TestingWebApplication app = new TestingWebApplication();		
+		//app.main(new String[]{});
 
 			
 		//TestingWebApplication app = new TestingWebApplication();
