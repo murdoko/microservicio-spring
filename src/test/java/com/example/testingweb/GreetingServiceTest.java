@@ -1,7 +1,7 @@
 package com.example.testingweb;
 
 import org.junit.jupiter.api.Test;
-import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions;
 
 public class GreetingServiceTest {
 
