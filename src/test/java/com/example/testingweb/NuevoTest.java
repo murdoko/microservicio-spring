@@ -14,6 +14,6 @@ public class IreyesTest {
 	public void test1()  {
 		GreetingService greetingService = new GreetingService();
 		final resultado = greetingService.greet();
-		Assertions.equal("Hello, World", resultado)		
+		Assertions.assertEquals("Hello, World", resultado)		
 	}
 }
