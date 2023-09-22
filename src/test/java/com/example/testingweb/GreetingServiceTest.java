@@ -13,6 +13,7 @@ import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.test.mock.mockito.MockBean;
 
 public class GreetingServiceTest {
 
