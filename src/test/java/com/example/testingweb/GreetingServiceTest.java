@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 import org.springframework.test.web.servlet.MockMvc;
-import static org.powermock.api.mockito.PowerMockito.mockStatic;
+
 
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
