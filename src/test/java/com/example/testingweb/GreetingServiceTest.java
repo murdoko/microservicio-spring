@@ -36,5 +36,5 @@ public class GreetingServiceTest {
 	        SpringApplication.run(TestingWebApplication.class, new String[]{"Hello", "World"});
 	    }
     
-	}	
+		
 }
