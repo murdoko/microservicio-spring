@@ -13,7 +13,6 @@ import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.springframework.boot.SpringApplication;
 
-@RunWith(MockitoJUnitRunner.class)
 public class GreetingServiceTest {
 
 	@Test
@@ -37,7 +36,7 @@ public class GreetingServiceTest {
 
 		TestingWebApplication app = new TestingWebApplication();
 		Mockito.when(springApplicationBuilder.sources(TestingWebApplication.class)).thenReturn(springApplicationBuilder);
-		SpringApplicationBuilder result = app.configure(springApplicationBuilder);
+		SpringApplicationBuilder result = TestingWebApplication.configure(springApplicationBuilder);
 		Mockito.verify(springApplicationBuilder).sources(TestingWebApplication.class);
 		assertEquals(springApplicationBuilder, result);
 		    
