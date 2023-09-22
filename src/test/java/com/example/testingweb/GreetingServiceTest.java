@@ -22,8 +22,6 @@ public class GreetingServiceTest {
 	@Test
 	public void test2() {
 		TestingWebApplication testingWebApplication = new TestingWebApplication();
-		String[] strAr1=new String[] {"Ani", "Sam", "Joe"}; //inline initialization  
-		AssertNotNull(testingWebApplication.main(new String[] {});;
-	
+		AssertNotNull(testingWebApplication.main(new String[] {});
 	}	
 }
