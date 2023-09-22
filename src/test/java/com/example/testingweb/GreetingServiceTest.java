@@ -22,6 +22,6 @@ public class GreetingServiceTest {
 	@Test
 	public void test2() {
 		TestingWebApplication testingWebApplication = new TestingWebApplication();
-		AssertNotNull(testingWebApplication.main(new String[] {});
+		testingWebApplication.main(new String[] {});
 	}	
 }
