@@ -10,11 +10,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class IreyesTest {
 
-	@Autowired
-	private GreetingService controller;
-
 	@Test
-	public void contextLoads() throws Exception {
-		assertThat(controller).isNotNull();
+	public void test1()  {
+		GreetingService greetingService = new GreetingService();
+		final resultado = greetingService.greet();
+		Assertions.equal("Hello, World", resultado)		
 	}
 }
