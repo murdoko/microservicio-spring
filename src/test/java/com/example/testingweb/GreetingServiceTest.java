@@ -2,6 +2,7 @@ package com.example.testingweb;
 
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
+import org.springframework.test.web.servlet.MockMvc;
 
 public class GreetingServiceTest {
 
