@@ -13,7 +13,7 @@ public class GreetingServiceTest {
 	}
 	@Test
 	public void test2() {
-		MyList myList = mock(TestingWebApplication.class);
+		TestingWebApplication myList = mock(TestingWebApplication.class);
 		String[] strAr1=new String[] {"Ani", "Sam", "Joe"}; //inline initialization  
 		assertThat(myList.main(strAr1)).isNotNull();
 	
