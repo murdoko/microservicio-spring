@@ -18,14 +18,12 @@ public class GreetingServiceTest {
 	
 	}
 
-	@Autowired
-	private MockMvc mockMvc;
 	
 	@Test
 	public void test2() {
-		TestingWebApplication myList = this.mockMvc(TestingWebApplication.class);
+		TestingWebApplication testingWebApplication = TestingWebApplication();
 		String[] strAr1=new String[] {"Ani", "Sam", "Joe"}; //inline initialization  
-		assertThat(myList.main(strAr1)).isNotNull();
+		AssertNotNull(testingWebApplication.main(strAr1));
 	
 	}	
 }
