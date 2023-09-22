@@ -21,7 +21,9 @@ public class GreetingServiceTest {
 		assertThat(greetingService.greet()).contains("Hello, World");
 	
 	}
-
+	
+	@Mock
+	private SpringApplicationBuilder springApplicationBuilder;
 	
 	    @Test
 	    public void mainPassesArguments() {
