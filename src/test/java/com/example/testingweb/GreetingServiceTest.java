@@ -2,7 +2,7 @@ package com.example.testingweb;
 
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions
 
 
 import org.springframework.test.web.servlet.MockMvc;
@@ -26,7 +26,7 @@ public class GreetingServiceTest {
 	    @Test
 	    public void mainPassesArguments() {
 		TestingWebApplication.main(new String[] {});
-		Assert.assertEquals(true, true);
+		Assertions.assertEquals(true, true);
 		//Mockito.mockStatic(SpringApplication.class);
 	        //TestingWebApplication.main(new String[]{"Hello", "World"});
 		//Mockito.verify(SpringApplication.class);
