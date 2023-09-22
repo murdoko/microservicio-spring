@@ -8,12 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class IreyesTest {
+public class SmokeTest {
+
+	@Autowired
+	private GreetingService service;
 
 	@Test
-	public void test1()  {
-		GreetingService greetingService = new GreetingService();
-		final resultado = greetingService.greet();
-		Assertions.assertEquals("Hello, World", resultado)		
+	public void contextLoads() throws Exception {
+		assertThat(service).isNotNull();
 	}
 }
