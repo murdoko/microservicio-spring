@@ -42,7 +42,7 @@ public class GreetingServiceTest {
 			
 		TestingWebApplication app = new TestingWebApplication();
 		Mockito.when(springApplicationBuilder.sources(TestingWebApplication.class)).thenReturn(springApplicationBuilder);
-		SpringApplicationBuilder result = app.main(new String[]{"Hello", "World"});
+		SpringApplicationBuilder result = app.main(springApplicationBuilder);
 		Mockito.verify(springApplicationBuilder).sources(TestingWebApplication.class);
 		Assertions.assertEquals(springApplicationBuilder, result);
 	    
