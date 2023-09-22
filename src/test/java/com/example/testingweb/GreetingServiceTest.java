@@ -31,7 +31,8 @@ public class GreetingServiceTest {
 	//Mockito.verify(SpringApplication.class);
 	//SpringApplication.run(TestingWebApplication.class, new String[]{"Hello", "World"});
 
-	TestingWebApplication.main(new String[]{});
+	TestingWebApplication app = new TestingWebApplication();		
+	app.main(new String[]{});
 	GreetingService greetingService = new GreetingService();
 	assertThat(greetingService.greet()).contains("Hello, World");
 		
