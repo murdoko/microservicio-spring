@@ -23,7 +23,7 @@ public class GreetingServiceTest {
 	public void test2() {
 		TestingWebApplication testingWebApplication = new TestingWebApplication();
 		String[] strAr1=new String[] {"Ani", "Sam", "Joe"}; //inline initialization  
-		AssertNotNull(testingWebApplication.main(strAr1));
+		AssertNotNull(testingWebApplication.main(new String[] {});;
 	
 	}	
 }
