@@ -25,12 +25,19 @@ public class GreetingServiceTest {
 	
 	    @Test
 	    public void mainPassesArguments() {
-		TestingWebApplication.main(new String[] {});
-		Assertions.assertTrue(true);
+		//TestingWebApplication.main(new String[] {});
+		//Assertions.assertTrue(true);
 		//Mockito.mockStatic(SpringApplication.class);
 	        //TestingWebApplication.main(new String[]{"Hello", "World"});
 		//Mockito.verify(SpringApplication.class);
         	//SpringApplication.run(TestingWebApplication.class, new String[]{"Hello", "World"});
+
+		App app = new TestingWebApplication();
+		Mockito.when(springApplicationBuilder.sources(App.class)).thenReturn(springApplicationBuilder);
+		SpringApplicationBuilder result = app.configure(springApplicationBuilder);
+		Mockito.verify(springApplicationBuilder).sources(App.class);
+		assertEquals(springApplicationBuilder, result);
+		    
 	    }
     
 		
