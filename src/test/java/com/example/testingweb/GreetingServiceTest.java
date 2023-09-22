@@ -24,10 +24,10 @@ public class GreetingServiceTest {
 	
 	    @Test
 	    public void mainPassesArguments() {
-		mockStatic(SpringApplication.class);
+		MockedStatic(SpringApplication.class);
 	        TestingWebApplication.main(new String[]{"Hello", "World"});
 		verifyStatic(SpringApplication.class);
-        	SpringApplication.run(ElectronicGiftcardServiceApplication.class, new String[]{"Hello", "World"});
+        	SpringApplication.run(TestingWebApplication.class, new String[]{"Hello", "World"});
 	    }
     
 		
