@@ -13,9 +13,9 @@ public class GreetingServiceTest {
 	}
 	@Test
 	public void test2() {
-		TestingWebApplication testingWebApplication = new TestingWebApplication();
+		MyList myList = mock(TestingWebApplication.class);
 		String[] strAr1=new String[] {"Ani", "Sam", "Joe"}; //inline initialization  
-		assertThat(testingWebApplication.main(strAr1)).isNotNull();
+		assertThat(myList.main(strAr1)).isNotNull();
 	
 	}	
 }
