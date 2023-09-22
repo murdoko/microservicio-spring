@@ -1,14 +1,14 @@
 package com.example.testingweb;
 
 import org.junit.jupiter.api.Test;
-import org.assertj.core.api.Assertions;
+import static org.assertj.core.api.Assertions.assertEquals;
 
 public class GreetingServiceTest {
 
 	@Test
 	public void test1() {
 		GreetingService greetingService = new GreetingService();
-		Assertions.assertEquals("Hello, World", "Hello, World");
+		assertEquals("Hello, World", "Hello, World");
 	
 	}
 }
