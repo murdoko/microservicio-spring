@@ -15,7 +15,7 @@ public class GreetingServiceTest {
 	public void test2() {
 		TestingWebApplication testingWebApplication = new TestingWebApplication();
 		String[] arrayParam = {"a", "b"};
-		assertThat(testingWebApplication.main(arrayParam)).isNotNull();
+		assertThat(testingWebApplication.main(string[] arrayParam)).isNotNull();
 	
 	}	
 }
