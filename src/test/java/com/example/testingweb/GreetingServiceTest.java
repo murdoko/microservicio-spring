@@ -32,10 +32,10 @@ public class GreetingServiceTest {
 		//Mockito.verify(SpringApplication.class);
         	//SpringApplication.run(TestingWebApplication.class, new String[]{"Hello", "World"});
 
-		App app = new TestingWebApplication();
-		Mockito.when(springApplicationBuilder.sources(App.class)).thenReturn(springApplicationBuilder);
+		TestingWebApplication app = new TestingWebApplication();
+		Mockito.when(springApplicationBuilder.sources(TestingWebApplication.class)).thenReturn(springApplicationBuilder);
 		SpringApplicationBuilder result = app.configure(springApplicationBuilder);
-		Mockito.verify(springApplicationBuilder).sources(App.class);
+		Mockito.verify(springApplicationBuilder).sources(TestingWebApplication.class);
 		assertEquals(springApplicationBuilder, result);
 		    
 	    }
