@@ -8,8 +8,7 @@ public class GreetingServiceTest {
 	@Test
 	public void test1() {
 		GreetingService greetingService = new GreetingService();
-		final resultado = greetingService.greet();
-		Assertions.assertEquals("Hello, World", resultado);
-		
+		Assertions.assertEquals("Hello, World", greetingService.greet());
+	
 	}
 }
