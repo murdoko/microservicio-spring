@@ -14,7 +14,7 @@ public class GreetingServiceTest {
 	@Test
 	public void test2() {
 		TestingWebApplication testingWebApplication = new TestingWebApplication();
-		assertThat(testingWebApplication.main('aa')).isNotNull();
+		assertThat(testingWebApplication.main(['aa'])).isNotNull();
 	
 	}	
 }
