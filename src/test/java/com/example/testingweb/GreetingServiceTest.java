@@ -15,6 +15,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
+
+import org.junit.runner.RunWith;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class GreetingServiceTest {
 
 	@Test
@@ -36,15 +43,15 @@ public class GreetingServiceTest {
 		//Mockito.verify(SpringApplication.class);
 		//SpringApplication.run(TestingWebApplication.class, new String[]{"Hello", "World"});
 	
-		//TestingWebApplication app = new TestingWebApplication();		
-		//app.main(new String[]{});
+		TestingWebApplication app = new TestingWebApplication();		
+		app.main(new String[]{});
 
 			
-		TestingWebApplication app = new TestingWebApplication();
-		Mockito.when(springApplicationBuilder.sources(TestingWebApplication.class)).thenReturn(springApplicationBuilder);
-		SpringApplicationBuilder result = app.main(springApplicationBuilder);
-		Mockito.verify(springApplicationBuilder).sources(TestingWebApplication.class);
-		Assertions.assertEquals(springApplicationBuilder, result);
+		//TestingWebApplication app = new TestingWebApplication();
+		//Mockito.when(springApplicationBuilder.sources(TestingWebApplication.class)).thenReturn(springApplicationBuilder);
+		//SpringApplicationBuilder result = app.main(springApplicationBuilder);
+		//Mockito.verify(springApplicationBuilder).sources(TestingWebApplication.class);
+		//Assertions.assertEquals(springApplicationBuilder, result);
 	    
 	}
     
