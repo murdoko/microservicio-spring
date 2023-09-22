@@ -10,13 +10,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class GreetingServiceTest {
 
-	@Autowired
-	private GreetingService service;
-
 	@Test
 	public void test1() {
 		GreetingService greetingService = new GreetingService();
-		final greet resultado = greetingService().greet();
+		final greet resultado = greetingService.greet();
 		Assertions.assertEquals("Hello, World", resultado);
 		
 	}
