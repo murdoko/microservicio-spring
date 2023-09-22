@@ -23,12 +23,18 @@ public class GreetingServiceTest {
 	}
 
 	
-	@Test
-	public void test2() {
-		MockedStatic<SpringApplication> utilities = Mockito.mockStatic(SpringApplication.class);
-        	utilities.when((MockedStatic.Verification) SpringApplication.run(TestingWebApplication.class, new String[]{})).thenReturn(null);
-        	TestingWebApplication.main(new String[]{});
-        	assertThat(SpringApplication.run(TestingWebApplication.class, new String[]{})).isEqualTo(null);
+	    @Test
+	    @PrepareForTest(SpringApplication.class)
+	    public void mainPassesArguments() {
+	        mockStatic(SpringApplication.class);
+	
+	        TestingWebApplication.main(new String[]{"Hello", "World"});
+	
+	        // start verifying behavior
+	        PowerMockito.verifyStatic();
+	        // call the static method you want to verify
+	        SpringApplication.run(TestingWebApplication.class, new String[]{"Hello", "World"});
+	    }
     
 	}	
 }
